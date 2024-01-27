@@ -3,7 +3,7 @@ This module holds helper functions
 """
 
 
-def interpret_num(input_num):
+def interpret_num(input_num):  # pylint: disable=inconsistent-return-statements
     """
     This function interprets a number to its equivalent words
 
@@ -11,7 +11,8 @@ def interpret_num(input_num):
       fortytwo
     """
     one_digit = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
-    two_digits = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
+    two_digits = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen",
+                  "eighteen", "nineteen"]
     parent_digits = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety", "hundred"]
 
     if input_num < 10:

@@ -19,6 +19,6 @@ class LimitedRangeNumber(argparse.Action):
         input_value = values[0]
         if input_value < self.range_start or input_value > self.range_end:
             raise argparse.ArgumentTypeError(
-                "{} must be between {} and {}".format(self.dest, self.range_start, self.range_end)
+                f"{self.dest} must be between {self.range_start} and {self.range_end}"
             )
         setattr(namespace, self.dest, values)
